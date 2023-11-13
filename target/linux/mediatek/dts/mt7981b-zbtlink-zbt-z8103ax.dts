@@ -46,9 +46,14 @@
 	leds {
 		compatible = "gpio-leds";
 
-		led_status_red: red {
-			label = "red:status";
-			gpios = <&pio 25 GPIO_ACTIVE_HIGH>;
+		net {
+			label = "blue:network";
+			gpios = <&pio 8 GPIO_ACTIVE_LOW>;
+		};
+
+		blue {
+			label = "blue:status";
+			gpios = <&pio 23 GPIO_ACTIVE_LOW>;
 		};
 
 		led_status_green: green {
@@ -56,14 +61,9 @@
 			gpios = <&pio 24 GPIO_ACTIVE_LOW>;
 		};
 		
-		blue {
-			label = "blue:status";
-			gpios = <&pio 23 GPIO_ACTIVE_LOW>;
-		};
-
-		net {
-			label = "blue:network";
-			gpios = <&pio 8 GPIO_ACTIVE_LOW>;
+		led_status_red: red {
+			label = "red:status";
+			gpios = <&pio 25 GPIO_ACTIVE_HIGH>;
 		};
 	};
 };
@@ -210,7 +210,6 @@
 		port@4 {
 			reg = <4>;
 			label = "wan";
-			nvmem-cell-names = "mac-address";
 		};
 
 		port@6 {
