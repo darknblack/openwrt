@@ -757,8 +757,8 @@ endef
 TARGET_DEVICES += zyxel_nwa50ax-pro
 
 define Device/zbtlink_zbt-z8103ax
-  DEVICE_VENDOR := ZBT
-  DEVICE_MODEL := Z8103AX
+  DEVICE_VENDOR := Zbtlink
+  DEVICE_MODEL := ZBT-Z8103AX
   DEVICE_DTS := mt7981b-zbtlink-zbt-z8103ax
   DEVICE_DTS_DIR := ../dts
   DEVICE_PACKAGES := kmod-mt7981-firmware mt7981-wo-firmware
